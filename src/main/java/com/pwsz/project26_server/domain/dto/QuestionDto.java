@@ -1,19 +1,19 @@
 package com.pwsz.project26_server.domain.dto;
 
 
-import com.pwsz.project26_server.domain.dto.Answer;
+import com.pwsz.project26_server.domain.dto.AnswerDto;
 
 import java.util.Arrays;
 
-public class Question {
+public class QuestionDto {
 
     private Long id;
     private String question;
-    private Answer[] answers = new Answer[4];
+    private AnswerDto[] answers = new AnswerDto[4];
 
-    public Question(){}
+    public QuestionDto(){}
 
-    public Question(Long id, String question){
+    public QuestionDto(Long id, String question){
         this.id = id;
         this.question = question;
     }
@@ -34,17 +34,17 @@ public class Question {
         this.question = question;
     }
 
-    public Answer[] getAnswers() {
+    public AnswerDto[] getAnswers() {
         return answers;
     }
 
-    public void setAnswers(Answer[] answers) {
+    public void setAnswers(AnswerDto[] answers) {
         this.answers = answers;
     }
 
     @Override
     public String toString() {
-        return "Question{" +
+        return "QuestionDto{" +
                 "id=" + id +
                 ", question='" + question + '\'' +
                 ", answers=" + Arrays.toString(answers) +

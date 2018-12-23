@@ -1,11 +1,13 @@
 package com.pwsz.project26_server.domain.dto;
 
-public class Answer {
+public class AnswerDto {
 
     private String answer;
     private boolean isCorrect;
 
-    public Answer(String answer, boolean isCorrect) throws EmptyAnswer {
+    public AnswerDto(){}
+
+    public AnswerDto(String answer, boolean isCorrect) throws EmptyAnswer {
         if(answer.isEmpty())
             throw new EmptyAnswer();
         this.answer = answer;
