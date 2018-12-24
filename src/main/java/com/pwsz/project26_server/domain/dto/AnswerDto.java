@@ -1,5 +1,7 @@
 package com.pwsz.project26_server.domain.dto;
 
+import org.jetbrains.annotations.NotNull;
+
 public class AnswerDto {
 
     private String answer;
@@ -7,9 +9,9 @@ public class AnswerDto {
 
     public AnswerDto(){}
 
-    public AnswerDto(String answer, boolean isCorrect) throws EmptyAnswer {
+    public AnswerDto(@NotNull String answer, boolean isCorrect) throws EmptyAnswerDto {
         if(answer.isEmpty())
-            throw new EmptyAnswer();
+            throw new EmptyAnswerDto();
         this.answer = answer;
         this.isCorrect = isCorrect;
     }

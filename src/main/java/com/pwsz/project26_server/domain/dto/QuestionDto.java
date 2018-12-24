@@ -13,9 +13,17 @@ public class QuestionDto {
 
     public QuestionDto(){}
 
+
+
     public QuestionDto(Long id, String question){
         this.id = id;
         this.question = question;
+    }
+
+    public QuestionDto(Long id, String question, AnswerDto[] answers) {
+        this.id = id;
+        this.question = question;
+        this.answers = answers;
     }
 
     public Long getId() {
