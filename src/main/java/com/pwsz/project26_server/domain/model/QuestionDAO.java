@@ -1,5 +1,6 @@
 package com.pwsz.project26_server.domain.model;
 
+import com.pwsz.project26_server.domain.dto.AnswerDto;
 import com.pwsz.project26_server.domain.dto.QuestionDto;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -46,18 +47,17 @@ public class QuestionDAO implements Question{
     }
 
     @Override
-    public String readQuestion(Long questionId) {
+    public String readQuestion(Long questionId, QuestionDto questionDto) {
         String line = "";
 
         try{
             BufferedReader reader = new BufferedReader(new FileReader(Long.toString(questionId) + ".txt"));
             line = reader.readLine();
             while (line != null){
-                line.replaceFirst(Long.toString(questionId) + ";", "");
-
-
+                if(line.startsWith(questionId.toString())){
+                   setVariables(line, questionDto);
+                }
             }
-
             reader.close();
         }catch (FileNotFoundException ex){
             LOGGER.error("File not found!");
@@ -65,8 +65,25 @@ public class QuestionDAO implements Question{
             LOGGER.error("I can not read this file!");
         }
 
-
-
         return "";
     }
+
+    @Override
+    public void setVariables(String line, QuestionDto questionDto){
+        String [] parts = line.split(";");
+        questionDto.setQuestion(parts[1]);
+        AnswerDto[] answersDto = new AnswerDto[4];
+
+        for(int i = 2; i < 6; i++){
+            if(parts[6] == Integer.toString(i - 1)) {
+                answersDto[i] = new AnswerDto(line, true);
+            }else {
+                answersDto[i] = new AnswerDto(line, false);
+            }
+
+            //questionDto.setAnswers(answersDto);
+        }
+        questionDto.setQuestion(parts[1]);
+    }
+
 }
