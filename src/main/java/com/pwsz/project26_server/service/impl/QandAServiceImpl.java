@@ -48,7 +48,7 @@ public class QandAServiceImpl implements QandAService {
 
         questionDto.setQuestion(parts[1]);
         for(int i = 2; i < 6; i++){
-            if(parts[6] == Integer.toString(i - 1)) {
+            if(parts[6].equals(Integer.toString(i - 1))) {
                 answersDto[i] = new AnswerDto(line, true);
             }else {
                 answersDto[i] = new AnswerDto(line, false);
