@@ -7,10 +7,4 @@ public interface Question {
     int howManyLines(Long questionId);
 
     int randQuestionNr(Long questionId);
-
-    String readQuestion(Long questionId, QuestionDto questionDto);
-
-
-    void setVariables(String line, QuestionDto questionDto);
-
 }

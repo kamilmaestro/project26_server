@@ -45,45 +45,4 @@ public class QuestionDAO implements Question{
 
         return rand.nextInt(maxLineNr) + 1;
     }
-
-    @Override
-    public String readQuestion(Long questionId, QuestionDto questionDto) {
-        String line = "";
-
-        try{
-            BufferedReader reader = new BufferedReader(new FileReader(Long.toString(questionId) + ".txt"));
-            line = reader.readLine();
-            while (line != null){
-                if(line.startsWith(questionId.toString())){
-                   setVariables(line, questionDto);
-                }
-            }
-            reader.close();
-        }catch (FileNotFoundException ex){
-            LOGGER.error("File not found!");
-        }catch (IOException ex){
-            LOGGER.error("I can not read this file!");
-        }
-
-        return "";
-    }
-
-    @Override
-    public void setVariables(String line, QuestionDto questionDto){
-        String [] parts = line.split(";");
-        questionDto.setQuestion(parts[1]);
-        AnswerDto[] answersDto = new AnswerDto[4];
-
-        for(int i = 2; i < 6; i++){
-            if(parts[6] == Integer.toString(i - 1)) {
-                answersDto[i] = new AnswerDto(line, true);
-            }else {
-                answersDto[i] = new AnswerDto(line, false);
-            }
-
-            //questionDto.setAnswers(answersDto);
-        }
-        questionDto.setQuestion(parts[1]);
-    }
-
 }
