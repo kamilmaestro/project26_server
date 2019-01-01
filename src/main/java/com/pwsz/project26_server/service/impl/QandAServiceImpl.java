@@ -1,6 +1,5 @@
 package com.pwsz.project26_server.service.impl;
 
-import com.pwsz.project26_server.domain.dto.AnswerDto;
 import com.pwsz.project26_server.domain.dto.QuestionDto;
 import com.pwsz.project26_server.domain.model.QuestionDAO;
 import com.pwsz.project26_server.service.QandAService;
@@ -46,16 +45,24 @@ public class QandAServiceImpl implements QandAService {
     @Override
     public void setVariables(String line, QuestionDto questionDto) {
         String [] parts = line.split(";");
-        AnswerDto[] answersDto = new AnswerDto[4];
+        String correctAnswerNr = parts[6];
 
         questionDto.setQuestion(parts[1]);
         for(int i = 2; i < 6; i++){
-            if(parts[6].equals(Integer.toString(i - 1))) {
-                answersDto[i] = new AnswerDto(line, true);
-            }else {
-                answersDto[i] = new AnswerDto(line, false);
+            if(isAnswerCorrect(correctAnswerNr)) {
+                questionDto.setCorrectAnswer(i);
             }
-            //questionDto.setAnswers(answersDto);
         }
+        questionDto.setAnswers(parts);
+    }
+
+    @Override
+    public boolean isAnswerCorrect(String correctAnswerNr) {
+        for(int i = 2; i < 6; i++){
+            if(correctAnswerNr.equals(Integer.toString(i - 1))) {
+                return true;
+            }
+        }
+        return false;
     }
 }

@@ -7,4 +7,6 @@ public interface QandAService {
     public void readQandA(Long questionId, QuestionDto questionDto);
 
     public void setVariables(String line, QuestionDto questionDto);
+
+    public boolean isAnswerCorrect(String correctAnswerNr);
 }

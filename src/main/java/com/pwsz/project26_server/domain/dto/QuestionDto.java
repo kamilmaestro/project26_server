@@ -1,15 +1,13 @@
 package com.pwsz.project26_server.domain.dto;
 
-
-import com.pwsz.project26_server.domain.dto.AnswerDto;
-
 import java.util.Arrays;
 
 public class QuestionDto {
 
     private Long id;
     private String question;
-    private AnswerDto[] answers = new AnswerDto[4];
+    private String[] answers = new String[4];
+    private int correctAnswer;
 
     public QuestionDto(){}
 
@@ -20,10 +18,11 @@ public class QuestionDto {
         this.question = question;
     }
 
-    public QuestionDto(Long id, String question, AnswerDto[] answers) {
+    public QuestionDto(Long id, String question, String[] answers, int correctAnswer) {
         this.id = id;
         this.question = question;
         this.answers = answers;
+        this.correctAnswer = correctAnswer;
     }
 
     public Long getId() {
@@ -42,12 +41,20 @@ public class QuestionDto {
         this.question = question;
     }
 
-    public AnswerDto[] getAnswers() {
+    public String[] getAnswers() {
         return answers;
     }
 
-    public void setAnswers(AnswerDto[] answers) {
+    public void setAnswers(String[] answers) {
         this.answers = answers;
+    }
+
+    public int getCorrectAnswer() {
+        return correctAnswer;
+    }
+
+    public void setCorrectAnswer(int correctAnswer) {
+        this.correctAnswer = correctAnswer;
     }
 
     @Override
@@ -56,6 +63,7 @@ public class QuestionDto {
                 "id=" + id +
                 ", question='" + question + '\'' +
                 ", answers=" + Arrays.toString(answers) +
+                ", correctAnswer=" + correctAnswer +
                 '}';
     }
 }
