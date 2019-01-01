@@ -7,12 +7,14 @@ import com.pwsz.project26_server.service.QandAService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
+@Service
 public class QandAServiceImpl implements QandAService {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(QandAService.class);
