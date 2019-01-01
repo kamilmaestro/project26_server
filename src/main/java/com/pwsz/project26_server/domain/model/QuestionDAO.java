@@ -24,8 +24,8 @@ public class QuestionDAO implements Question{
 
         try {
             BufferedReader reader = new BufferedReader(new FileReader(Long.toString(questionId) + ".txt"));
-            line = reader.readLine();
-            while(line != null){
+
+            while((line = reader.readLine()) != null){
                 nrOfLines++;
             }
             reader.close();

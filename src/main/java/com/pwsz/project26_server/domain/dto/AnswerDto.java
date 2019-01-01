@@ -1,6 +1,7 @@
 package com.pwsz.project26_server.domain.dto;
 
-import org.jetbrains.annotations.NotNull;
+
+import javax.validation.constraints.NotNull;
 
 public class AnswerDto {
 
