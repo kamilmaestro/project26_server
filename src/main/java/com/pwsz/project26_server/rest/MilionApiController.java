@@ -13,6 +13,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.lang.reflect.Field;
+import java.nio.charset.Charset;
+
 @RestController
 @RequestMapping("/api")
 public class MilionApiController {
@@ -24,6 +27,19 @@ public class MilionApiController {
 
     @RequestMapping(value = "/milion/question/{id}", method = RequestMethod.GET)
     public ResponseEntity<QuestionDto> sendQAndA(@PathVariable("id") Long id){
+
+        System.setProperty("file.encoding","UTF-8");
+        Field charset;
+        try {
+            charset = Charset.class.getDeclaredField("defaultCharset");
+            charset.setAccessible(true);
+            charset.set(null,null);
+        } catch (NoSuchFieldException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        }
+
         QuestionDto questionDto = new QuestionDto();
         qandAService.readQandA(id, questionDto);
 
