@@ -6,7 +6,10 @@ public class QuestionDto {
 
     private Long id;
     private String question;
-    private String[] answers = new String[4];
+    private String answer1;
+    private String answer2;
+    private String answer3;
+    private String answer4;
     private int correctAnswer;
 
     public QuestionDto(){}
@@ -18,10 +21,13 @@ public class QuestionDto {
         this.question = question;
     }
 
-    public QuestionDto(Long id, String question, String[] answers, int correctAnswer) {
+    public QuestionDto(Long id, String question, String answer1, String answer2, String answer3, String answer4, int correctAnswer) {
         this.id = id;
         this.question = question;
-        this.answers = answers;
+        this.answer1 = answer1;
+        this.answer2 = answer2;
+        this.answer3 = answer3;
+        this.answer4 = answer4;
         this.correctAnswer = correctAnswer;
     }
 
@@ -41,12 +47,36 @@ public class QuestionDto {
         this.question = question;
     }
 
-    public String[] getAnswers() {
-        return answers;
+    public String getAnswer1() {
+        return answer1;
     }
 
-    public void setAnswers(String[] answers) {
-        this.answers = answers;
+    public void setAnswer1(String answer1) {
+        this.answer1 = answer1;
+    }
+
+    public String getAnswer2() {
+        return answer2;
+    }
+
+    public void setAnswer2(String answer2) {
+        this.answer2 = answer2;
+    }
+
+    public String getAnswer3() {
+        return answer3;
+    }
+
+    public void setAnswer3(String answer3) {
+        this.answer3 = answer3;
+    }
+
+    public String getAnswer4() {
+        return answer4;
+    }
+
+    public void setAnswer4(String answer4) {
+        this.answer4 = answer4;
     }
 
     public int getCorrectAnswer() {
@@ -62,7 +92,10 @@ public class QuestionDto {
         return "QuestionDto{" +
                 "id=" + id +
                 ", question='" + question + '\'' +
-                ", answers=" + Arrays.toString(answers) +
+                ", answer1='" + answer1 + '\'' +
+                ", answer2='" + answer2 + '\'' +
+                ", answer3='" + answer3 + '\'' +
+                ", answer4='" + answer4 + '\'' +
                 ", correctAnswer=" + correctAnswer +
                 '}';
     }

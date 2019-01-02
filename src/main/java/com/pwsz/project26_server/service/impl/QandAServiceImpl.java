@@ -28,11 +28,13 @@ public class QandAServiceImpl implements QandAService {
 
         try{
             BufferedReader reader = new BufferedReader(new FileReader(Long.toString(questionId) + ".txt"));
-            line = reader.readLine();
-            while (line != null){
+            //line = reader.readLine();
+            while ((line = reader.readLine()) != null){
                 if(line.startsWith(Integer.toString(randNrQuestion))){
-                    setVariables(line, questionDto);
+                    setVariables( questionId, line, questionDto);
+                    LOGGER.info("sd {}", line);
                 }
+                LOGGER.info("sd {}", line);
             }
             reader.close();
         }catch (FileNotFoundException ex){
@@ -43,17 +45,18 @@ public class QandAServiceImpl implements QandAService {
     }
 
     @Override
-    public void setVariables(String line, QuestionDto questionDto) {
+    public void setVariables(Long questionId, String line, QuestionDto questionDto) {
         String [] parts = line.split(";");
-        String correctAnswerNr = parts[6];
 
+        questionDto.setId(questionId);
         questionDto.setQuestion(parts[1]);
-        for(int i = 2; i < 6; i++){
-            if(isAnswerCorrect(correctAnswerNr)) {
-                questionDto.setCorrectAnswer(i);
-            }
-        }
-        questionDto.setAnswers(parts);
+        int correctAnswerNr = Integer.parseInt(parts[6]);
+        questionDto.setCorrectAnswer(correctAnswerNr);
+
+        questionDto.setAnswer1(parts[2]);
+        questionDto.setAnswer2(parts[3]);
+        questionDto.setAnswer3(parts[4]);
+        questionDto.setAnswer4(parts[5]);
     }
 
     @Override

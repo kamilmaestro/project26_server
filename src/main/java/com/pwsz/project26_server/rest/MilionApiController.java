@@ -24,13 +24,10 @@ public class MilionApiController {
 
     @RequestMapping(value = "/milion/question/{id}", method = RequestMethod.GET)
     public ResponseEntity<QuestionDto> sendQAndA(@PathVariable("id") Long id){
-        LOGGER.info("Zwracam JSON'a ");
-
         QuestionDto questionDto = new QuestionDto();
         qandAService.readQandA(id, questionDto);
 
         LOGGER.info("Question: {}", questionDto.getQuestion());
-        LOGGER.info("Answers: {}", questionDto.getAnswers());
         LOGGER.info("Correct Answer: {}", questionDto.getCorrectAnswer());
 
         return new ResponseEntity<>(questionDto, HttpStatus.OK);
