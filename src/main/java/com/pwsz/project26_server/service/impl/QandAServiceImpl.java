@@ -25,16 +25,15 @@ public class QandAServiceImpl implements QandAService {
     public void readQandA(Long questionId, QuestionDto questionDto) {
         String line = "";
         int randNrQuestion = questionDAO.randQuestionNr(questionId);
+        LOGGER.info("id{} ", randNrQuestion);
 
         try{
             BufferedReader reader = new BufferedReader(new FileReader(Long.toString(questionId) + ".txt"));
-            //line = reader.readLine();
+
             while ((line = reader.readLine()) != null){
                 if(line.startsWith(Integer.toString(randNrQuestion))){
                     setVariables( questionId, line, questionDto);
-                    LOGGER.info("sd {}", line);
                 }
-                LOGGER.info("sd {}", line);
             }
             reader.close();
         }catch (FileNotFoundException ex){
@@ -48,15 +47,12 @@ public class QandAServiceImpl implements QandAService {
     public void setVariables(Long questionId, String line, QuestionDto questionDto) {
         String [] parts = line.split(";");
 
-        questionDto.setId(questionId);
         questionDto.setQuestion(parts[1]);
-        int correctAnswerNr = Integer.parseInt(parts[6]);
-        questionDto.setCorrectAnswer(correctAnswerNr);
-
         questionDto.setAnswer1(parts[2]);
         questionDto.setAnswer2(parts[3]);
         questionDto.setAnswer3(parts[4]);
         questionDto.setAnswer4(parts[5]);
+        questionDto.setCorrectAnswer(Integer.parseInt(parts[6]));
     }
 
     @Override

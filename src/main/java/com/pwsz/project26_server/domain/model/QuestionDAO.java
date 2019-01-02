@@ -1,7 +1,5 @@
 package com.pwsz.project26_server.domain.model;
 
-import com.pwsz.project26_server.domain.dto.AnswerDto;
-import com.pwsz.project26_server.domain.dto.QuestionDto;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Repository;
@@ -43,6 +41,6 @@ public class QuestionDAO implements Question{
         int maxLineNr = howManyLines(questionId);
         Random rand = new Random();
 
-        return rand.nextInt(maxLineNr) + 1;
+        return rand.nextInt(maxLineNr - 1) + 1;
     }
 }

@@ -3,8 +3,6 @@ package com.pwsz.project26_server.domain.dto;
 import java.util.Arrays;
 
 public class QuestionDto {
-
-    private Long id;
     private String question;
     private String answer1;
     private String answer2;
@@ -16,27 +14,17 @@ public class QuestionDto {
 
 
 
-    public QuestionDto(Long id, String question){
-        this.id = id;
+    public QuestionDto(String question){
         this.question = question;
     }
 
-    public QuestionDto(Long id, String question, String answer1, String answer2, String answer3, String answer4, int correctAnswer) {
-        this.id = id;
+    public QuestionDto( String question, String answer1, String answer2, String answer3, String answer4, int correctAnswer) {
         this.question = question;
         this.answer1 = answer1;
         this.answer2 = answer2;
         this.answer3 = answer3;
         this.answer4 = answer4;
         this.correctAnswer = correctAnswer;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
 
     public String getQuestion() {
@@ -90,7 +78,6 @@ public class QuestionDto {
     @Override
     public String toString() {
         return "QuestionDto{" +
-                "id=" + id +
                 ", question='" + question + '\'' +
                 ", answer1='" + answer1 + '\'' +
                 ", answer2='" + answer2 + '\'' +
