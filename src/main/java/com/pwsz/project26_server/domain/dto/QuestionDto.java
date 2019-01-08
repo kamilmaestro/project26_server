@@ -1,7 +1,5 @@
 package com.pwsz.project26_server.domain.dto;
 
-import java.util.Arrays;
-
 public class QuestionDto {
     private String question;
     private String answer1;

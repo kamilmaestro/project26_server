@@ -1,0 +1,6 @@
+ID;QUESTION;ANSWER1;ANSWER2;ANSWER3;ANSWER4;CORRECT_ANSWER;
+1;Stolica Portugalii to?;Madryt;Lizbona;Porto;Braga;2;
+2;Roger Federer to?;piłkarz;bokser;malarz;tenisista;4;
+3;Największe miasto w Polsce to?;Katowice;Warszawa;Kraków;Gdańsk;2;
+4;Nissan to producent samochodó majacy siedzibę w?;Japonii;Koreii Południowej;Chinach;Niemczech;1;
+5;W którym roku odbyłą się bitwa warszawska, tzw. 'Cud nad Wisłą'?;1925 r;1930 r;1920 r;1922 r;3;

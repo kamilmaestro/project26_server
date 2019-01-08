@@ -2,7 +2,6 @@ package com.pwsz.project26_server.rest;
 
 import com.pwsz.project26_server.domain.dto.QuestionDto;
 import com.pwsz.project26_server.service.QandAService;
-import com.pwsz.project26_server.service.impl.QandAServiceImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,9 +33,7 @@ public class MilionApiController {
             charset = Charset.class.getDeclaredField("defaultCharset");
             charset.setAccessible(true);
             charset.set(null,null);
-        } catch (NoSuchFieldException e) {
-            e.printStackTrace();
-        } catch (IllegalAccessException e) {
+        } catch (NoSuchFieldException | IllegalAccessException e) {
             e.printStackTrace();
         }
 
@@ -48,7 +45,4 @@ public class MilionApiController {
 
         return new ResponseEntity<>(questionDto, HttpStatus.OK);
     }
-
-
-
 }
