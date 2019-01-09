@@ -40,7 +40,7 @@ public class MilionApiController {
         QuestionDto questionDto = new QuestionDto();
         qandAService.readQandA(id, questionDto);
 
-        LOGGER.info("Question: {}", questionDto.getQuestion());
+        LOGGER.info("nr: {}, Question: {}", id, questionDto.getQuestion());
         LOGGER.info("Correct Answer: {}", questionDto.getCorrectAnswer());
 
         return new ResponseEntity<>(questionDto, HttpStatus.OK);
