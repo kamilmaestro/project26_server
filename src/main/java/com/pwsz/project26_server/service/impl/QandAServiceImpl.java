@@ -24,7 +24,6 @@ public class QandAServiceImpl implements QandAService {
     public void readQandA(Long questionId, QuestionDto questionDto) {
         String line = "";
         int randNrQuestion = questionDAO.randQuestionNr(questionId);
-        LOGGER.info("id{} ", randNrQuestion);
 
         try{
             BufferedReader reader = new BufferedReader(new FileReader(Long.toString(questionId) + ".txt"));
