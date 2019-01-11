@@ -22,23 +22,27 @@ public class QandAServiceImpl implements QandAService {
 
     @Override
     public void readQandA(Long questionId, QuestionDto questionDto) {
-        String line = "";
-        int randNrQuestion = questionDAO.randQuestionNr(questionId);
-        LOGGER.info("id{} ", randNrQuestion);
+        String line;
 
         try{
-            BufferedReader reader = new BufferedReader(new FileReader(Long.toString(questionId) + ".txt"));
+            int randNrQuestion = questionDAO.randQuestionNr(questionId);
 
-            while ((line = reader.readLine()) != null){
-                if(line.startsWith(Integer.toString(randNrQuestion))){
-                    setVariables( questionId, line, questionDto);
+            BufferedReader reader = new BufferedReader(new FileReader(Long.toString(questionId) + ".txt"));
+            try {
+                while ((line = reader.readLine()) != null) {
+                    if (line.startsWith(Integer.toString(randNrQuestion))) {
+                        setVariables(questionId, line, questionDto);
+                    }
                 }
+            }finally {
+                reader.close();
             }
-            reader.close();
         }catch (FileNotFoundException ex){
             LOGGER.error("File not found!");
         }catch (IOException ex){
             LOGGER.error("I can not read this file!");
+        } catch (Exception ex) {
+            LOGGER.error("File is empty!");
         }
     }
 
@@ -52,15 +56,5 @@ public class QandAServiceImpl implements QandAService {
         questionDto.setAnswer3(parts[4]);
         questionDto.setAnswer4(parts[5]);
         questionDto.setCorrectAnswer(Integer.parseInt(parts[6]));
-    }
-
-    @Override
-    public boolean isAnswerCorrect(String correctAnswerNr) {
-        for(int i = 2; i < 6; i++){
-            if(correctAnswerNr.equals(Integer.toString(i - 1))) {
-                return true;
-            }
-        }
-        return false;
     }
 }

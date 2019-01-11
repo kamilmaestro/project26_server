@@ -1,6 +1,8 @@
 package com.pwsz.project26_server.rest;
 
+import com.pwsz.project26_server.domain.dto.ErrorDto;
 import com.pwsz.project26_server.domain.dto.QuestionDto;
+import com.pwsz.project26_server.domain.model.QuestionDAO;
 import com.pwsz.project26_server.service.QandAService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -24,8 +26,11 @@ public class MilionApiController {
     @Autowired
     QandAService qandAService;
 
+    @Autowired
+    QuestionDAO questionDAO;
+
     @RequestMapping(value = "/milion/question/{id}", method = RequestMethod.GET)
-    public ResponseEntity<QuestionDto> sendQAndA(@PathVariable("id") Long id){
+    public ResponseEntity<?> sendQAndA(@PathVariable("id") Long id){
 
         System.setProperty("file.encoding","UTF-8");
         Field charset;
@@ -43,6 +48,8 @@ public class MilionApiController {
         LOGGER.info("Question: {}", questionDto.getQuestion());
         LOGGER.info("Correct Answer: {}", questionDto.getCorrectAnswer());
 
-        return new ResponseEntity<>(questionDto, HttpStatus.OK);
+        return questionDAO.isEmpty(questionDto) ?
+                new ResponseEntity<>(new ErrorDto("File doesn't exist or hasn't any content!"), HttpStatus.valueOf(404)) :
+                new ResponseEntity<>(questionDto, HttpStatus.OK);
     }
 }

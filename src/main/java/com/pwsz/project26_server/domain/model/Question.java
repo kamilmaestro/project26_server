@@ -6,5 +6,7 @@ public interface Question {
 
     int howManyLines(Long questionId);
 
-    int randQuestionNr(Long questionId);
+    int randQuestionNr(Long questionId) throws Exception;
+
+    boolean isEmpty(QuestionDto questionDto);
 }
