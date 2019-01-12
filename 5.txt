@@ -1,5 +1,3 @@
 ID;QUESTION;ANSWER1;ANSWER2;ANSWER3;ANSWER4;CORRECT_ANSWER;
 1;W którym roku odbyła się bitwa pod Grunwaldem?;1410 r;1510 r;1800 r; 2000 r;1;
 2;Która sławna modelka zagrała w filmie 'Nagi Instynkt'?;Claudia Shiffer;Sharon Stone;Monika Belucci;Pamela Anderson;2;
-3;Ronaldo to?;piłkarz;siatkarz;nie wiem;aktor;1;
-4;Java to?;kawa; język programowania; kot; pies;2;
