@@ -1,6 +1,5 @@
 package com.pwsz.project26_server.domain.model;
 
-import com.pwsz.project26_server.domain.dto.FileIsEmpty;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Repository;
@@ -40,7 +39,7 @@ public class QuestionDAO implements Question{
     }
 
     @Override
-    public int randQuestionNr(Long questionId) throws FileIsEmpty{
+    public int randQuestionNr(Long questionId) {
         int maxLineNr = howManyLines(questionId);
         Random rand = new Random();
 

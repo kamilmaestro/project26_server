@@ -9,4 +9,6 @@ public interface QandAService {
     void setVariables(Long questionId, String line, QuestionDto questionDto);
 
     boolean isEmpty(QuestionDto questionDto);
+
+    boolean isIdCorrect(Long id);
 }

@@ -70,4 +70,9 @@ public class QandAServiceImpl implements QandAService {
 
         return false;
     }
+
+    @Override
+    public boolean isIdCorrect(Long id){
+        return (id >= 1 && id <= 12);
+    }
 }

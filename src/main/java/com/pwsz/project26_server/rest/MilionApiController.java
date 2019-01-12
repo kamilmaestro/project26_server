@@ -2,6 +2,7 @@ package com.pwsz.project26_server.rest;
 
 import com.pwsz.project26_server.domain.dto.ErrorDto;
 import com.pwsz.project26_server.domain.dto.QuestionDto;
+import com.pwsz.project26_server.domain.dto.UrlError;
 import com.pwsz.project26_server.service.QandAService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -28,6 +29,8 @@ public class MilionApiController {
 
     @RequestMapping(value = "/milion/question/{id}", method = RequestMethod.GET)
     public ResponseEntity<?> sendQAndA(@PathVariable("id") Long id){
+
+        if(!(qandAService.isIdCorrect(id))) throw new UrlError();
 
         System.setProperty("file.encoding","UTF-8");
         Field charset;
