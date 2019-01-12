@@ -1,5 +1,6 @@
 package com.pwsz.project26_server.service.impl;
 
+import com.google.common.base.Strings;
 import com.pwsz.project26_server.domain.dto.QuestionDto;
 import com.pwsz.project26_server.domain.model.QuestionDAO;
 import com.pwsz.project26_server.service.QandAService;
@@ -56,5 +57,17 @@ public class QandAServiceImpl implements QandAService {
         questionDto.setAnswer3(parts[4]);
         questionDto.setAnswer4(parts[5]);
         questionDto.setCorrectAnswer(Integer.parseInt(parts[6]));
+    }
+
+    @Override
+    public boolean isEmpty(QuestionDto questionDto){
+        if(Strings.isNullOrEmpty(questionDto.getQuestion()))
+            return true;
+        else if(Strings.isNullOrEmpty(questionDto.getAnswer1()) || Strings.isNullOrEmpty(questionDto.getAnswer2()) || Strings.isNullOrEmpty(questionDto.getAnswer3()) || Strings.isNullOrEmpty(questionDto.getAnswer4()))
+            return true;
+        else if(questionDto.getCorrectAnswer() <= 0)
+            return true;
+
+        return false;
     }
 }

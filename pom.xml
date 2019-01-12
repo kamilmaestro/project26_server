@@ -64,7 +64,7 @@
         <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
-            <version>23.5-jre</version> <!-- or 23.5-android for the Android flavor -->
+            <version>23.5-jre</version>
         </dependency>
     </dependencies>
 
