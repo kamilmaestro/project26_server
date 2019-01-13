@@ -43,8 +43,6 @@ public class QuestionDAO implements Question{
         int maxLineNr = howManyLines(questionId);
         Random rand = new Random();
 
-        LOGGER.info("nr of lines: {}", maxLineNr);
-
         return rand.nextInt(maxLineNr - 1) + 1;
     }
 }
