@@ -1,7 +1,10 @@
 ID;QUESTION;ANSWER1;ANSWER2;ANSWER3;ANSWER4;CORRECT_ANSWER;
-1;W którym roku odbyła się bitwa pod Grunwaldem?;1410 r;1510 r;1800 r; 2000 r;1;
-2;Która sławna modelka zagrała w filmie 'Nagi Instynkt'?;Claudia Shiffer;Sharon Stone;Monika Belucci;Pamela Anderson;2;
-3;Ronaldo to?;piłkarz;siatkarz;nie wiem;aktor;1;
-4;Java to?;kawa; język programowania; kot; pies;2;
-5;Chrzest Polski?;1006 r;956 r;996 r;966 r;4;
-6;Linux to?;rodzaj pingwina;system operacyjny;plastik;drzewo;2;
+1;W którym roku odbyła się bitwa pod Kircholmem?;1410 r;1605 r;1490 r; 1595 r;2;
+3;Co w wolnym tłumaczeniu oznacza słowo fraszka?;gałązka;krótka myśl;ptaszek;wierszyk;4;
+4;Prezydentem Polski był:;Jarosław Kaczyński;Donald Tusk;Aleksander Kwaśniewski;Leszek Miller;3;
+5;Missisipi to?;jezioro;rzeka;góa;pasmo górskie;2;
+6;Mare Nostrum znaczy?;nasze morze;nasze zwycięstwo;wspólny wysiłek;wysiłek ku chwale;1;
+7;W którym roku odbyła się bitwa pod Płowcami?;1310 r;1305 r;1331 r; 1401 r;3;
+8;W którym roku odbyła się bitwa pod Kłuszynem?;1610 r;1605 r;1590 r; 1607 r;1;
+9;W którym roku odbyła się bitwa pod Waterloo?;1810 r;1805 r;1820 r; 1815 r;4;
+10;W którym roku odbyła się bitwa pod Tobrukiem?;1940 r;1945 r;1930 r; 1941 r;4;

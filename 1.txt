@@ -8,6 +8,6 @@ ID;QUESTION;ANSWER1;ANSWER2;ANSWER3;ANSWER4;CORRECT_ANSWER;
 7;Jezyk urzedowy w Brazylii to?;hiszpański;francuski;brazylisjki;portugalski;4;
 8;Stolica Rosji to?;Moskwa;Kazań;Kaliningrad;Saint Petersburg;1;
 9;Liczba ludnosci w Polsce wynosi około?;30 mln;42 mln;38 mln;33 mln;3;
-10;Hymn Polski to?;Miłość w Zakopanem;Bogurodzica;Hejnał Mariacki;Mazurek Dąbrowskiego;4;
+10;Hymn Polski to?;Gaude Mater Polonia;Bogurodzica;Hejnał Mariacki;Mazurek Dąbrowskiego;4;
 11;Przyjaciel człowieka to?;kot;koń;kura;pies;4;
 12;Tanzania leży na kontynencie?;europejskim;azjatyckim;afrykańskim;amerykańskim;3;

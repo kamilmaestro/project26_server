@@ -1,4 +1,11 @@
 ID;QUESTION;ANSWER1;ANSWER2;ANSWER3;ANSWER4;CORRECT_ANSWER;
 1;W którym roku odbyła się bitwa pod Grunwaldem?;1410 r;1510 r;1800 r; 2000 r;1;
 2;Która sławna modelka zagrała w filmie 'Nagi Instynkt'?;Claudia Shiffer;Sharon Stone;Monika Belucci;Pamela Anderson;2;
-3;Ronaldo to?;piłkarz;siatkarz;nie wiem;aktor;1;
+3;Franz Beckenbauer to były?;piłkarz;siatkarz;nie wiem;aktor;1;
+4;Bradd Pitt to?;piłkarz;siatkarz;nie wiem;aktor;4;
+5;Jezyk urzędowy w Gwatemali to?;hiszpański;francuski;brazylisjki;portugalski;1;
+6;Język urzędowy w Chile to?; hiszpański;francuski;brazylisjki;portugalski;1;
+7;Flaga Turcji posiada: ;księżyc;kilka gwiazd;słońce;żadne z tych;1;
+8;Grota to potoczne, lecz niefachowe określenie:;tunelu;przejścia podziemnego;korytarza górniczego;jaskini;4;
+9;Tadżykistan leży na kontynencie?;europejskim;azjatyckim;afrykańskim;amerykańskim;2;
+10;Belize leży na kontynencie?;europejskim;azjatyckim;afrykańskim;amerykańskim;4;

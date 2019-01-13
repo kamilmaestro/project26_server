@@ -1,2 +1,11 @@
 ID;QUESTION;ANSWER1;ANSWER2;ANSWER3;ANSWER4;CORRECT_ANSWER;
 1;W którym roku odbyła się bitwa pod Grunwaldem?;1410 r;1510 r;1800 r; 2000 r;1;
+2;Paolo Dybala to?;piłkarz;siatkarz;nie wiem;aktor;1;
+3;Loris Karius to?;piłkarz;siatkarz;nie wiem;aktor;1;
+4;Bradd Pitt to?;piłkarz;siatkarz;nie wiem;aktor;4;
+5;Borys Szyc to?;piłkarz;siatkarz;nie wiem;aktor;4;
+6;Ivan Zaytsev to?;piłkarz;siatkarz;nie wiem;aktor;2;
+7;Micah Christenson to?;piłkarz;siatkarz;nie wiem;aktor;2;
+8;Srecki Lisinać to?;piłkarz;siatkarz;nie wiem;aktor;2;
+9;Ashley Young to?;piłkarz;siatkarz;nie wiem;aktor;1;
+10;Emre Can to?;piłkarz;siatkarz;nie wiem;aktor;1;

@@ -1,11 +1,11 @@
 ID;QUESTION;ANSWER1;ANSWER2;ANSWER3;ANSWER4;CORRECT_ANSWER;
-1;W którym roku odbyła się bitwa pod Grunwaldem?;1410 r;1510 r;1800 r; 2000 r;1;
-2;Która sławna modelka zagrała w filmie 'Nagi Instynkt'?;Claudia Shiffer;Sharon Stone;Monika Belucci;Pamela Anderson;2;
-3;Ronaldo to?;piłkarz;siatkarz;nie wiem;aktor;1;
-4;Java to?;kawa; język programowania; kot; pies;2;
+1;Somalia leży na kontynencie?;europejskim;azjatyckim;afrykańskim;amerykańskim;3;
+2;Erytrea leży na kontynencie?;europejskim;azjatyckim;afrykańskim;amerykańskim;3;
+3;Burkina Faso leży na kontynencie?;europejskim;azjatyckim;afrykańskim;amerykańskim;3;
+4;Tadżykistan leży na kontynencie?;europejskim;azjatyckim;afrykańskim;amerykańskim;2;
 5;Chrzest Polski?;1006 r;956 r;996 r;966 r;4;
 6;Linux to?;rodzaj pingwina;system operacyjny;plastik;drzewo;2;
 7;Jezyk urzedowy w Brazylii to?;hiszpański;francuski;brazylisjki;portugalski;4;
-8;Stolica Rosji to?;Moskwa;Kazań;Kaliningrad;Saint Petersburg;1;
-9;Liczba ludnosci w Polsce wynosi około?;30 mln;42 mln;38 mln;33 mln;3;
+8;Stolica Kanady to?;Ottawa;Toronto;Newfoundland;Vancouver;1;
+9;Nepal leży na kontynencie?;europejskim;azjatyckim;afrykańskim;amerykańskim;2;
 10;Hymn Polski to?;Miłość w Zakopanem;Bogurodzica;Hejnał Mariacki;Mazurek Dąbrowskiego;4;

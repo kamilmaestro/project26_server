@@ -1,3 +1,11 @@
 ID;QUESTION;ANSWER1;ANSWER2;ANSWER3;ANSWER4;CORRECT_ANSWER;
 1;W którym roku odbyła się bitwa pod Grunwaldem?;1410 r;1510 r;1800 r; 2000 r;1;
 2;Która sławna modelka zagrała w filmie 'Nagi Instynkt'?;Claudia Shiffer;Sharon Stone;Monika Belucci;Pamela Anderson;2;
+3;Co w wolnym tłumaczeniu oznacza słowo fraszka?;gałązka;krótka myśl;ptaszek;wierszyk;4;
+4;Prezydentem Polski był:;Jarosław Kaczyński;Donald Tusk;Aleksander Kwaśniewski;Leszek Miller;3;
+5;Co zakochani wycinają na pniach drzew?;serce przebite strzałą;dłonie złączone szarfą;mózg z wbitą różą;motyle w brzuchu;1;
+6;Linux to?;rodzaj pingwina;system operacyjny;plastik;drzewo;2;
+7;Jezyk urzędowy w Brazylii to?;hiszpański;francuski;brazylisjki;portugalski;4;
+8;Język urzędowy w Peru to?; hiszpański;francuski;brazylisjki;portugalski;1;
+9;Język urzędowy w Uragwaju to?;hiszpański;francuski;brazylisjki;portugalski;1;
+10;Język urzędowy w Argentynie to?;hiszpański;francuski;brazylisjki;portugalski;1;

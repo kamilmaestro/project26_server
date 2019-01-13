@@ -1,4 +1,11 @@
 ID;QUESTION;ANSWER1;ANSWER2;ANSWER3;ANSWER4;CORRECT_ANSWER;
-1;W którym roku odbyła się bitwa pod Grunwaldem?;1410 r;1510 r;1800 r; 2000 r;1;
-2;Która sławna modelka zagrała w filmie 'Nagi Instynkt'?;Claudia Shiffer;Sharon Stone;Monika Belucci;Pamela Anderson;2;
-3;Ronaldo to?;piłkarz;siatkarz;nie wiem;aktor;1;
+1;"Jakie to liczby: 2,3,5,7,11 ;parzyste;kolejne;złożone;pierwsze;4;
+2;W którym roku odbyła się bitwa pod Grunwaldem?;1410 r;1510 r;1800 r; 2000 r;1;
+3;Która sławna modelka zagrała w filmie 'Nagi Instynkt'?;Claudia Shiffer;Sharon Stone;Monika Belucci;Pamela Anderson;2;
+4;Ronaldo to?;piłkarz;siatkarz;nie wiem;aktor;1;
+5;Liczba ludnosci w Polsce wynosi około?;30 mln;42 mln;38 mln;33 mln;3;
+6;Hymn Polski to?;Gaude Mater Polonia;Bogurodzica;Hejnał Mariacki;Mazurek Dąbrowskiego;4;
+7;Największa rzeka w Polsce to: ;Odra;Wisła;San;Bug;2;
+8;W którym roku odbyła się bitwa pod Grunwaldem?;1410 r;1510 r;1800 r; 2000 r;1;
+9;Flaga Turcji posiada: ;księżyc;kilka gwiazd;słońce;żadne z tych;1;
+10;Prezydentem Polski był: ;Jarosław Kaczyński;Donald Tusk;Aleksander Kwaśniewski;Leszek Miller;3;
