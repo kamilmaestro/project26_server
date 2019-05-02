@@ -65,7 +65,7 @@ public class QandAServiceImpl implements QandAService {
             return true;
         else if(Strings.isNullOrEmpty(questionDto.getAnswer1()) || Strings.isNullOrEmpty(questionDto.getAnswer2()) || Strings.isNullOrEmpty(questionDto.getAnswer3()) || Strings.isNullOrEmpty(questionDto.getAnswer4()))
             return true;
-        else if(questionDto.getCorrectAnswer() <= 0)
+        else if(questionDto.getCorrectAnswer() <= 0 || questionDto.getCorrectAnswer() > 4)
             return true;
 
         return false;

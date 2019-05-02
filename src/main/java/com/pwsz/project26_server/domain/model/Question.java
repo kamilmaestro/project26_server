@@ -4,5 +4,5 @@ public interface Question {
 
     int howManyLines(Long questionId);
 
-    int randQuestionNr(Long questionId) throws Exception;
+    int randQuestionNr(Long questionId);
 }
